@@ -15,6 +15,5 @@ export class DodavanjeSobeComponent implements OnInit {
 
   dodajSobu() {
     console.log(this.smestaj);
-    // ovde možete dodati logiku za dodavanje sobe
   }
 }
