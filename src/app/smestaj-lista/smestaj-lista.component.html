@@ -1,17 +1,23 @@
 <table class="ui celled table">
-    <thead>
-      <tr>
-        <th>Naziv</th>
-        <th>Broj Kreveta</th>
-        <th>Cena Po Noći</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let smestaj of smestaji">
-        <td>{{ smestaj?.naziv }}</td>
-        <td>{{ smestaj?.brojKreveta }}</td>
-        <td>{{ smestaj?.cenaPoNoci }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th>Naziv</th>
+      <th>Broj Kreveta</th>
+      <th>Cena Po Noći</th>
+      <th>Klima</th>
+      <th>Mini Bar</th>
+      <th>Sauna</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let smestaj of smestaji">
+      <td>{{ smestaj?.naziv }}</td>
+      <td>{{ smestaj?.brojKreveta }}</td>
+      <td>{{ smestaj?.cenaPoNoci }}</td>
+      <td>{{ smestaj?.klima ? 'Da' : 'Ne' }}</td>
+      <td>{{ smestaj?.miniBar ? 'Da' : 'Ne' }}</td>
+      <td>{{ smestaj?.sauna ? 'Da' : 'Ne' }}</td>
+    </tr>
+  </tbody>
+</table>
   

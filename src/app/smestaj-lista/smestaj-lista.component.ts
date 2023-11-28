@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { SmestajService } from '../smestaj.service'; 
 import { Smestaj } from './smestaj.model';
 
 @Component({
@@ -6,19 +8,23 @@ import { Smestaj } from './smestaj.model';
   templateUrl: './smestaj-lista.component.html',
   styleUrls: ['./smestaj-lista.component.css']
 })
-export class SmestajListaComponent implements OnInit {
-  smestaji: Smestaj[] = [
-    { naziv: 'Luksuzna Soba', brojKreveta: 2, cenaPoNoci: 100 },
-    { naziv: 'Jednokrevetna Soba', brojKreveta: 1, cenaPoNoci: 50 },
-    { naziv: 'Apartman', brojKreveta: 2, cenaPoNoci: 200 },
-   
-  ];
+export class SmestajListaComponent implements OnInit, OnDestroy {
+  smestaji: Smestaj[] = [];
+  private smestajiSub: Subscription | undefined;
 
-  constructor() { }
+  constructor(private smestajService: SmestajService) { }
 
   ngOnInit(): void {
+    this.smestaji = this.smestajService.getSmestaji();
+    this.smestajiSub = this.smestajService.getSmestajiUpdateListener()
+      .subscribe((smestaji: Smestaj[]) => {
+        this.smestaji = smestaji;
+      });
   }
-  dodajNoviSmestaj(smestaj: Smestaj): void {
-    this.smestaji.push(smestaj);
+
+  ngOnDestroy(): void {
+    if (this.smestajiSub) {
+      this.smestajiSub.unsubscribe();
+    }
   }
 }

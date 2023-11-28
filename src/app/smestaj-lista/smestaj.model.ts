@@ -1,7 +1,9 @@
 export class Smestaj {
-    naziv: string | undefined;
-    brojKreveta: number | undefined;
-    cenaPoNoci: number | undefined;
-
+    naziv!: string;
+    brojKreveta!: number;
+    cenaPoNoci!: number;
+    klima: boolean = false;
+    miniBar: boolean = false;
+    sauna: boolean = false;
   }
   

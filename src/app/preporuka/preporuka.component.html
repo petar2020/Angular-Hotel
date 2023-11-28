@@ -1,0 +1,23 @@
+<div class="ui container">
+    <h2 class="ui huge header center aligned">Naše Preporuke</h2>
+    <div class="ui divider"></div>
+  
+    <div class="ui centered grid">
+      <div class="ui raised cards center aligned grid">
+        <div class="card" *ngFor="let preporuka of preporuke">
+          <!-- <div class="blurring dimmable image">
+            <img src="{{ preporuka.slikaUrl }}" alt="{{ preporuka.naziv }}">
+          </div> -->
+          <div class="content">
+            <div class="header">{{ preporuka.naziv }}</div>
+            <div class="description">
+              {{ preporuka.opis }}
+            </div>
+          </div>
+          <div class="extra content">
+            <button class="ui primary button">Detaljnije</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

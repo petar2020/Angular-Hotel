@@ -1,18 +1,44 @@
 <div class="ui segment">
-    <h3 class="ui dividing header">Dodavanje Nove Sobe</h3>
-    <div class="ui form">
-      <div class="field">
-        <label>Naziv</label>
-        <input type="text" [(ngModel)]="smestaj.naziv" placeholder="Unesite naziv sobe" required="true">
-      </div>
-      <div class="field">
-        <label>Broj Kreveta</label>
-        <input type="number" [(ngModel)]="smestaj.brojKreveta" placeholder="Unesite broj kreveta">
-      </div>
-      <div class="field">
-        <label>Cena Po Noći</label>
-        <input type="number" [(ngModel)]="smestaj.cenaPoNoci" placeholder="Unesite cenu po noći">
-      </div>
-      <button class="ui teal button" (click)="dodajSobu()">Dodaj Sobu</button>
+  <h3 class="ui dividing header">Dodavanje Nove Sobe</h3>
+  <div class="ui form">
+    <div class="field">
+      <label>Naziv</label>
+      <input type="text" [(ngModel)]="smestaj.naziv" placeholder="Unesite naziv sobe" required="true">
     </div>
+    <div class="field">
+      <label>Broj Kreveta</label>
+      <input type="number" [(ngModel)]="smestaj.brojKreveta" placeholder="Unesite broj kreveta">
+    </div>
+    <div class="field">
+      <label>Cena Po Noći</label>
+      <input type="number" [(ngModel)]="smestaj.cenaPoNoci" placeholder="Unesite cenu po noći">
+    </div>
+    <div class="inline fields">
+      <label>Dodatne usluge:</label>
+      <div class="field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" id="klima" [(ngModel)]="smestaj.klima">
+          <label for="klima">Klima</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" id="miniBar" [(ngModel)]="smestaj.miniBar">
+          <label for="miniBar">Mini Bar</label>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui toggle checkbox">
+          <input type="checkbox" id="sauna" [(ngModel)]="smestaj.sauna">
+          <label for="sauna">Sauna</label>
+        </div>
+      </div>
+    </div>
+  
+    <div class="field">
+      <label>Dodatni troškovi:</label>
+      <div>{{ dodatniTroskovi }} dinara.</div>
+    </div>
+    <button class="ui teal button" (click)="dodajSobu()">Dodaj Sobu</button>
   </div>
+</div>

@@ -1,0 +1,25 @@
+.ui.menu {
+    background-color: #333;
+    font-size: 16px;
+    border-radius: 0;
+  }
+  
+  .ui.menu .item {
+    color: rgb(0, 0, 0);
+    padding: 14px 20px;
+  }
+  
+  .ui.menu .item:hover {
+    background-color: #111;
+  }
+  
+  .ui.centered.menu .ui.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  body {
+    padding-top: 50px; /* Ako koristite fiksiran meni */
+  }

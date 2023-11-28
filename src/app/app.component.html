@@ -8,30 +8,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 </head>
 <body>
-<div class="ui container">
-  <h1 class="ui teal center aligned header">MetHotels</h1>
-  
-  <app-smestaj-lista></app-smestaj-lista>
+  <app-bar></app-bar>
 
-  <div class="ui segment">
-    <h3 class="ui dividing header">Dodavanje Nove Sobe</h3>
-    <div class="ui form">
-      <div class="field">
-        <label>Naziv</label>
-        <input type="text" [(ngModel)]="smestaj.naziv" placeholder="Unesite naziv sobe" required="true">
-      </div>
-      <div class="field">
-        <label>Broj Kreveta</label>
-        <input type="number" [(ngModel)]="smestaj.brojKreveta" placeholder="Unesite broj kreveta">
-      </div>
-      <div class="field">
-        <label>Cena Po Noći</label>
-        <input type="number" [(ngModel)]="smestaj.cenaPoNoci" placeholder="Unesite cenu po noći">
-      </div>
-      <button class="ui teal button" (click)="dodajSobu()">Dodaj Sobu</button>
-    </div>
-  </div>
-</div>
+  <router-outlet></router-outlet>
 
 </body>
 </html>

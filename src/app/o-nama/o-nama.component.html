@@ -1,0 +1,35 @@
+<div class="ui container">
+    <h2 class="ui huge header center aligned">O Met Hotelu</h2>
+    <div class="ui divider"></div>
+
+    <div class="ui stackable two column grid">
+        <div class="column">
+            <img class="ui fluid image" src="./assets/img/slika5.jpg" alt="Met Hotel">
+        </div>
+        <div class="column">
+            <h3 class="ui header">Dobrodošli u Met Hotel</h3>
+            <p>Met Hotel je osnovan 1990. godine, sa misijom da pruži izuzetne usluge i nezaboravno iskustvo svakom gostu...</p>
+            <p>Nastavljamo da inoviramo i unapređujemo naše usluge kako bismo osigurali da vaš boravak bude ne samo udoban, već i nezaboravan...</p>
+        </div>
+    </div>  
+    <h3 class="ui header center aligned">Naša Misija i Vrednosti</h3>
+    <div class="ui raised segment">
+        <p>Naša misija je da pružimo vrhunski kvalitet i izvanredne usluge. Posvećeni smo stvaranju jedinstvenih iskustava za naše goste...</p>
+        <p>Vrednosti našeg tima su usmerene ka inovacijama, odgovornosti, i izvrsnosti u svakom aspektu našeg poslovanja...</p>
+    </div>
+    <h3 class="ui header center aligned">Upoznajte Naš Tim</h3>
+    <div class="ui four column stackable grid">
+        <div class="column" *ngFor="let clan of tim">
+            <div class="ui card">
+                <div class="image">
+                    <img src="{{ clan.slikaUrl }}" alt="{{ clan.ime }}">
+                </div>
+                <div class="content">
+                    <div class="header">{{ clan.ime }}</div>
+                    <div class="meta">{{ clan.pozicija }}</div>
+                    <div class="description">{{ clan.biografija }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

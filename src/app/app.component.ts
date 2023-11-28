@@ -14,7 +14,10 @@ export class AppComponent {
   smestaj: Smestaj = {
     naziv: '',
     brojKreveta: 0,
-    cenaPoNoci: 0
+    cenaPoNoci: 0,
+    klima: false,
+    miniBar: false,
+    sauna: false
   };
 
   dodajSobu() {
@@ -24,7 +27,10 @@ export class AppComponent {
       this.smestaj = {
         naziv: '',
         brojKreveta: 0,
-        cenaPoNoci: 0
+        cenaPoNoci: 0,
+        klima: false,
+        miniBar: false,
+        sauna: false
       };
     } else {
       console.error('Nemam referencu na SmestajListaComponent!');

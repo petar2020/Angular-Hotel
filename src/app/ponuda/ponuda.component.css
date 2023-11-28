@@ -1,0 +1,22 @@
+.ui.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .ui.card {
+    margin: 10px !important;
+  }
+  
+  .ui.card > .image img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .ui.huge.header.center.aligned {
+    margin-bottom: 20px;
+  }
+  
+  .ui.card .description {
+    min-height: 100px;
+  }
+  
