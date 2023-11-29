@@ -34,10 +34,15 @@
         </div>
       </div>
     </div>
-  
-    <div class="field">
-      <label>Dodatni troškovi:</label>
-      <div>{{ dodatniTroskovi }} dinara.</div>
+    <div class="ui segment">
+      <div class="field">
+        <label>Ukupna cena:</label>
+        <div class="ui teal label large">{{ ukupnaCena }} dinara</div>
+      </div>
+      <div class="field">
+        <label>Dodatni troškovi:</label>
+        <div class="ui orange label large">{{ dodatniTroskovi }} dinara</div>
+      </div>
     </div>
     <button class="ui teal button" (click)="dodajSobu()">Dodaj Sobu</button>
   </div>
