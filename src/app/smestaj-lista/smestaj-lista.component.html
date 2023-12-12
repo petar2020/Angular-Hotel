@@ -7,6 +7,7 @@
       <th>Klima</th>
       <th>Mini Bar</th>
       <th>Sauna</th>
+      <th>Akcije</th> <!-- Add a new column for actions -->
     </tr>
   </thead>
   <tbody>
@@ -17,7 +18,10 @@
       <td>{{ smestaj?.klima ? 'Da' : 'Ne' }}</td>
       <td>{{ smestaj?.miniBar ? 'Da' : 'Ne' }}</td>
       <td>{{ smestaj?.sauna ? 'Da' : 'Ne' }}</td>
+      <td>
+        <button class="ui red button" (click)="obrisiSobu(smestaj)">Obriši</button>
+        <button class="ui blue button" (click)="izmeniSobu(smestaj)">Izmeni</button>
+      </td>
     </tr>
   </tbody>
 </table>
-  

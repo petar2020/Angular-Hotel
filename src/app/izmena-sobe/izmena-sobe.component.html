@@ -1,0 +1,40 @@
+<!-- izmena-sobe.component.html -->
+<div class="form-container">
+    <form (ngSubmit)="onSubmit()" class="ui form">
+      <div class="field">
+        <label>Naziv</label>
+        <input type="text" [(ngModel)]="smestaj.naziv" name="naziv" required>
+      </div>
+      <div class="field">
+        <label>Broj Kreveta</label>
+        <input type="number" [(ngModel)]="smestaj.brojKreveta" name="brojKreveta" required>
+      </div>
+      <div class="field">
+        <label>Cena Po Noći</label>
+        <input type="number" [(ngModel)]="smestaj.cenaPoNoci" name="cenaPoNoci" required>
+      </div>
+      <div class="field">
+        <label>Klima</label>
+        <div class="ui toggle checkbox">
+          <input type="checkbox" [(ngModel)]="smestaj.klima" name="klima">
+          <label></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Mini Bar</label>
+        <div class="ui toggle checkbox">
+          <input type="checkbox" [(ngModel)]="smestaj.miniBar" name="miniBar">
+          <label></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Sauna</label>
+        <div class="ui toggle checkbox">
+          <input type="checkbox" [(ngModel)]="smestaj.sauna" name="sauna">
+          <label></label>
+        </div>
+      </div>
+      <button class="ui button primary" type="submit">Sačuvaj Izmenu</button>
+    </form>
+  </div>
+  

@@ -12,6 +12,7 @@ export class AppComponent {
 
   title = 'Angular-Hotel';
   smestaj: Smestaj = {
+    id: 0, 
     naziv: '',
     brojKreveta: 0,
     cenaPoNoci: 0,
@@ -25,6 +26,7 @@ export class AppComponent {
       this.smestajListaComponent.smestaji.push(this.smestaj);
 
       this.smestaj = {
+        id: 0, 
         naziv: '',
         brojKreveta: 0,
         cenaPoNoci: 0,

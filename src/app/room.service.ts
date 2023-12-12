@@ -5,6 +5,9 @@ import { Smestaj } from './smestaj-lista/smestaj.model';
   providedIn: 'root'
 })
 export class RoomService {
+  getSmestaji() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
 
